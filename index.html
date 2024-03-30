@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Non Solo Pane - Home</title></head>
+        <link rel = "stylesheet" type = "text/css" href = "style/NonSoloPane_style.css">
+        <script type="text/javascript" src = "js/NonSoloPane_script.js"></script>
+    <body>
+        <header>
+            <nav>
+                <ul class = "nav">
+                <li class = "navlist"><a href = "Sito_Homepage.html">Home</a></li>
+                <li class = "navlist"><a href = "Sito_Prodotti.html" target="_blank">Prodotti</a></li>
+                <li class = "contact" onclick = "showcontact()">CONTATTACI </li>
+                <li class = "stop_moving show" id = "MovingON" onclick = "stop_moving()">Moving Text ON</li> 
+                <li class = "stop_moving hidden" id = "MovingOFF" onclick = "resume_moving()">Moving Text OFF</li>
+                </ul>
+            </nav>
+
+            <div class = "hidden_contact"  id = "contact">
+                <div class = "showContact">
+                <div class = "contatto"><p>Matteo: <a href = "tel:+393479187069">3479187069</a></p></div>
+                <div class = "contatto"><p>Cinzia: <a href = "tel:+393466567270">3466567270</a></p></div>
+                <div class = "contatto"><p>Email: <a href = "mailto: cima.srls2022@gmail.com">cima.srls2022@gmail.com</a></p></div>
+            </div>  
+            <div class = "social">
+                <div class = "contatto"><p>Facebook: <a href = "https://www.facebook.com/profile.php?id=100057202249934" target="_blank">Non Solo Pane</a></p></div>
+                <div class = "contatto"><p>Instagram: <a href = "https://www.instagram.com/nonsolopaneceggia?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">@nonsolopaneceggia</a></p></div>
+            </div>
+            </div>
+        </header>
+
+        <h3 id = "special">NON SOLO PANE E' IL MIGLIOR SNACK/BAR</h3>
+        <div class = "LogoImg">
+            <img class = "logo" id = "logo" src = "immagini/logo.png">
+        </div>
+        
+        <div class = "description">
+            <h3>
+                 Il nostro locale e' molto piu' di un semplice panificio, e' un bar accogliente dove il profumo fragrante
+                 del pane appena sfornato si mescola all'aroma di caffe' caldo e deliziose pietanze.
+            </h3>
+        </div>
+    </body>
+</html>

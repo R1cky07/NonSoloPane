@@ -1,0 +1,168 @@
+body {
+font-family:Verdana;
+overflow:hidden;
+}
+header {
+text-align: center;
+border-radius: 40px;
+}
+.nav{
+    overflow: hidden;
+    list-style-type: none;
+    position:relative;
+}
+@keyframes testoSpeciale {
+    from {
+        transform:translateX(-150%);
+    }
+    to {
+        transform: translateX(300%);
+    }
+}
+@keyframes showMenu {
+    from {
+        transform: translateX(-250px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+@keyframes hideMenu {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(-250px);
+    }
+}
+#special{
+    position: absolute;
+    animation: testoSpeciale 17s linear infinite;
+    font-weight: bold;
+    color: goldenrod;
+    z-index: -1;
+}
+.TextMovingStop{
+    font-weight: bold;
+    color:goldenrod;
+}
+.navlist{
+    float:left;
+}
+.navlist a{
+    display:block;
+    text-align:center;
+    text-decoration: none;
+    background-color: yellow;
+    color:black;
+    margin:10px 10px 0px 10px;
+    border:1px groove black;
+    border-radius: 5px;
+    transition-property: all;
+    transition-duration:500ms;
+}
+.navlist a:hover{
+    transform:skew(-3deg, 5deg);
+}
+.stop_moving{
+    float:right;
+    margin:10px;
+    font-size:18px;
+    border-radius: 7px;
+    transition-property: all;
+    transition-duration: 300ms;
+    font-weight: bolder;
+}
+.stop_moving:hover{
+    cursor:pointer;
+    background-color:rgb(201, 197, 197);
+}
+.LogoImg{
+    text-align:center;
+}
+.logo{
+    width: 25%;
+}
+.description{
+    color:white;
+    width:50%;
+    border-radius: 10px;
+    color:black;
+}
+.contact{
+    float:right;
+    margin:10px;
+    transition-property: all;
+    transition-duration: 300ms;
+    border-radius: 7px;
+    font-size:18px;
+    font-weight: bolder;
+}
+.contact:hover{
+    background-color:rgb(201, 197, 197);
+    cursor:pointer;
+    transform:translateY(-7px);
+}
+#contact{
+    position:relative;
+    z-index: 10;
+    float:right;
+    text-align: center;
+    margin:-10px;
+    margin-right:5px;
+    font-family: Calibri;
+    font-variant:small-caps;
+}
+#contact a{
+    text-decoration: none;
+    color:indianred;
+    transition-property: all;
+    transition-duration: 200ms;
+}
+#contact a:hover{
+    color:rgba(186, 216, 18, 0.959);
+}
+@keyframes ShowContact {
+    0%{
+        opacity:0;
+        transform:translateY(-2px);
+    }
+    100%{
+        opacity:1;
+        transform: translateY(0px);
+    }
+}
+@keyframes HideContact {
+    0%{
+        opacity:1;
+        transform:translateY(0px);
+    }
+    100%{
+        opacity:0;
+        transform: translateY(-2px);
+    }
+}
+.contatto{
+    border:2px groove goldenrod;
+    border-radius:20px;
+    background-color: rgba(218, 165, 32, 0.219);
+}
+.showContact{
+    transition-property: all;
+    transition-duration:300ms;
+    margin-top:-6px;
+    animation:ShowContact 1s ease both;
+}
+.show{
+    display:block;
+}
+.ClassLogoMargin{
+    margin-right:-17.29%;
+}
+.hidden_contact{
+    display:none;
+    animation:HideContact 1s ease;
+}
+.hidden{
+    display:none;
+}
