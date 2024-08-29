@@ -11,17 +11,9 @@ border-radius: 40px;
     list-style-type: none;
     position:relative;
 }
-@keyframes testoSpeciale {
-    from {
-        transform:translateX(-150%);
-    }
-    to {
-        transform: translateX(300%);
-    }
-}
 @keyframes showMenu {
     from {
-        transform: translateX(-250px);
+        transform: translateX(-270px);
     }
     to {
         transform: translateX(0px);
@@ -32,16 +24,147 @@ border-radius: 40px;
         transform: translateX(0px);
     }
     to {
-        transform: translateX(-250px);
+        transform: translateX(-270px);
     }
 }
-#special{
-    position: absolute;
-    animation: testoSpeciale 17s linear infinite;
-    font-weight: bold;
-    color: goldenrod;
-    z-index: -1;
+@keyframes InMenuTitleAnimation {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
 }
+.menu_line{
+    position:sticky;
+    overflow:hidden;
+    user-select: none;
+    position:fixed;
+    display:grid;
+    grid-template-columns: 1fr;
+    float:left;
+    transition-property: all;
+    transition-duration: 300ms;
+    border-radius: 5px;
+    z-index : 1;
+}
+.menu_line:hover{
+    background-color:rgb(201, 197, 197);
+    cursor:pointer;
+}
+.menu_underscore{
+    margin-top:-12px;
+}
+.menu_underscore_bottom{
+    margin-top:-12px;
+    margin-bottom:2px;
+}
+.menu{
+    scrollbar-width: none;
+    overflow:scroll;
+    font-family: Times New Roman;
+    position:sticky;
+    width: 96%;
+    height:auto;
+    position:fixed;
+    display:flex;
+    animation-duration: 500ms;
+    animation-timing-function:cubic-bezier(0.215, 0.610, 0.355, 1);
+    animation-iteration-count:1;
+}
+.real_menu{
+    flex:0.2;
+    float:left;
+    border-radius: 7px;
+    background-color: #FFEE99;
+}
+.hidden_menu{
+    margin-left:-270px;
+}
+.show_menu{
+    margin-left:0px;
+}
+.inMenu{
+    width:fit-content;
+    margin-left:2%;
+    overflow:hidden;
+}
+.TitleInMenu{
+    transition-duration: 500ms;
+    width:fit-content;
+    font-family:serif;
+    transition-property: all;
+    text-align: center;
+    animation-name: InMenuTitleAnimation;
+    animation-duration: 10s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+}
+.TitleTxt{
+    user-select: none;
+}
+.contacts{
+    display:grid;
+    grid-template-columns: 1fr;
+    overflow:hidden;
+    text-align: center;
+    justify-content: end;
+    width:fit-content;
+}
+.contatti{
+    display:grid;
+    grid-template-columns: 1fr;
+}
+.contatto{
+    overflow:hidden;
+    margin-bottom:-14px;
+    font-variant: small-caps;
+    user-select: none;
+}
+.contatto a{
+    border-radius:20px;
+    border-top:1px groove transparent;
+    text-decoration: none;
+    color:rgb(23, 179, 179);
+    font-variant: small-caps;
+    transition-property: all;
+    transition-duration: 300ms;
+}
+.contatto a:hover{
+    color:rgb(23, 113, 173);
+    border-top:1px groove darkorange;
+}
+.contact_txt{
+    margin-bottom:-5px;
+    transform:skewX(10deg);
+}
+.options_txt{
+    transform:skewX(10deg);
+    margin-bottom:-5px;  
+    text-align:center;
+}
+.moving_text_option_container{
+    text-align:left;
+    user-select: none;
+}
+.moving_text_option{
+    border:2px groove black;
+    width: fit-content;
+    padding-left:3px;
+    padding-right: 3px;
+    font-variant: small-caps;
+    border-radius: 5px;
+    transition-property: all;
+    transition-duration: 300ms;
+}
+.moving_text_option:hover{
+    background-color:rgb(201, 197, 197);
+    cursor:pointer;
+}
+.hidden_moving_text{
+    display:none;
+}
+
 .TextMovingStop{
     font-weight: bold;
     color:goldenrod;
@@ -89,80 +212,7 @@ border-radius: 40px;
     border-radius: 10px;
     color:black;
 }
-.contact{
-    float:right;
-    margin:10px;
-    transition-property: all;
-    transition-duration: 300ms;
-    border-radius: 7px;
-    font-size:18px;
-    font-weight: bolder;
-}
-.contact:hover{
-    background-color:rgb(201, 197, 197);
-    cursor:pointer;
-    transform:translateY(-7px);
-}
-#contact{
-    position:relative;
-    z-index: 10;
-    float:right;
-    text-align: center;
-    margin:-10px;
-    margin-right:5px;
-    font-family: Calibri;
-    font-variant:small-caps;
-}
-#contact a{
-    text-decoration: none;
-    color:indianred;
-    transition-property: all;
-    transition-duration: 200ms;
-}
-#contact a:hover{
-    color:rgba(186, 216, 18, 0.959);
-}
-@keyframes ShowContact {
-    0%{
-        opacity:0;
-        transform:translateY(-2px);
-    }
-    100%{
-        opacity:1;
-        transform: translateY(0px);
-    }
-}
-@keyframes HideContact {
-    0%{
-        opacity:1;
-        transform:translateY(0px);
-    }
-    100%{
-        opacity:0;
-        transform: translateY(-2px);
-    }
-}
-.contatto{
-    border:2px groove goldenrod;
-    border-radius:20px;
-    background-color: rgba(218, 165, 32, 0.219);
-}
-.showContact{
-    transition-property: all;
-    transition-duration:300ms;
-    margin-top:-6px;
-    animation:ShowContact 1s ease both;
-}
-.show{
-    display:block;
-}
+
 .ClassLogoMargin{
     margin-right:-17.29%;
-}
-.hidden_contact{
-    display:none;
-    animation:HideContact 1s ease;
-}
-.hidden{
-    display:none;
 }
