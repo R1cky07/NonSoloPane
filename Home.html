@@ -1,34 +1,52 @@
 <!DOCTYPE html>
 <html>
-    <head><title>Non Solo Pane - Home</title></head>
+    <head>
+        <title>Non Solo Pane - Home</title>
+        <link rel = "icon" href = "immagini/logo.png">
+    </head>
         <link rel = "stylesheet" type = "text/css" href = "style/NonSoloPane_style.css">
         <script type="text/javascript" src = "js/NonSoloPane_script.js"></script>
     <body>
         <header>
+            <div class = "menu_line" id = "menuLine" onclick = "menuAppear()">
+                <div class = "menu_underscore">___</div>
+                <div class = "menu_underscore">___</div>
+                <div class = "menu_underscore_bottom">___</div>
+            </div>
+            <div class = "menu hidden_menu" id = "menu">
+                <div class = "real_menu">
+                    <h1 class = "TitleInMenu TitleTxt" id = "MenuTitle">NON SOLO PANE</h1>
+                    <div class = "inMenu">
+                        <div class = "allOptions">
+                            <h2 class = "options_txt TitleTxt">OPZIONI</h2>
+                            <div class = "moving_text_option_container">
+                                <p class = "moving_text_option" id = "MovingON" onclick = "stop_moving()">Moving Text On</p>
+                                <p class = "moving_text_option hidden_moving_text" id = "MovingOFF" onclick = "resume_moving()">Moving Text Off</p>
+                            </div>
+                        </div>
+                        <div class = "contacts">
+                            <h2 class = "contact_txt TitleTxt">CONTATTI</h2>
+                                <div class = "contatti">
+                                    <div class = "contatto"><p>Matteo: <a href = "tel:+393479187069">3479187069</a></p></div>
+                                    <div class = "contatto"><p>Cinzia: <a href = "tel:+393466567270">3466567270</a></p></div>
+                                    <div class = "contatto"><p>Email: <a href = "mailto: cima.srls2022@gmail.com">cima.srls2022@gmail.com</a></p></div>
+                                </div>
+                            <h2 class = "contact_txt TitleTxt">SOCIAL</h2>
+                                <div class = "contatti">
+                                    <div class = "contatto"><p>Facebook: <a href = "https://www.facebook.com/profile.php?id=100057202249934" target="_blank">Non Solo Pane</a></p></div>
+                                    <div class = "contatto"><p>Instagram: <a href = "https://www.instagram.com/nonsolopaneceggia?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">@nonsolopaneceggia</a></p></div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <nav>
                 <ul class = "nav">
                 <li class = "navlist"><a href = "Sito_Homepage.html">Home</a></li>
                 <li class = "navlist"><a href = "Sito_Prodotti.html" target="_blank">Prodotti</a></li>
-                <li class = "contact" onclick = "showcontact()">CONTATTACI </li>
-                <li class = "stop_moving show" id = "MovingON" onclick = "stop_moving()">Moving Text ON</li> 
-                <li class = "stop_moving hidden" id = "MovingOFF" onclick = "resume_moving()">Moving Text OFF</li>
-                </ul>
             </nav>
-
-            <div class = "hidden_contact"  id = "contact">
-                <div class = "showContact">
-                <div class = "contatto"><p>Matteo: <a href = "tel:+393479187069">3479187069</a></p></div>
-                <div class = "contatto"><p>Cinzia: <a href = "tel:+393466567270">3466567270</a></p></div>
-                <div class = "contatto"><p>Email: <a href = "mailto: cima.srls2022@gmail.com">cima.srls2022@gmail.com</a></p></div>
-            </div>  
-            <div class = "social">
-                <div class = "contatto"><p>Facebook: <a href = "https://www.facebook.com/profile.php?id=100057202249934" target="_blank">Non Solo Pane</a></p></div>
-                <div class = "contatto"><p>Instagram: <a href = "https://www.instagram.com/nonsolopaneceggia?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">@nonsolopaneceggia</a></p></div>
-            </div>
-            </div>
         </header>
-
-        <h3 id = "special">NON SOLO PANE E' IL MIGLIOR SNACK/BAR</h3>
+        
         <div class = "LogoImg">
             <img class = "logo" id = "logo" src = "immagini/logo.png">
         </div>
@@ -39,5 +57,6 @@
                  del pane appena sfornato si mescola all'aroma di caffe' caldo e deliziose pietanze.
             </h3>
         </div>
+
     </body>
 </html>
