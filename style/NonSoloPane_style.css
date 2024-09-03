@@ -1,6 +1,5 @@
 body {
 font-family:Verdana;
-overflow:hidden;
 }
 header {
 text-align: center;
@@ -9,22 +8,22 @@ border-radius: 40px;
 .nav{
     overflow: hidden;
     list-style-type: none;
-    position:relative;
+    position:fixed;
 }
 @keyframes showMenu {
     from {
-        transform: translateX(-270px);
+        transform: translateX(-300px);
     }
     to {
-        transform: translateX(0px);
+        transform: translateX(-5px);
     }
 }
 @keyframes hideMenu {
     from {
-        transform: translateX(0px);
+        transform: translateX(-5px);
     }
     to {
-        transform: translateX(-270px);
+        transform: translateX(-300px);
     }
 }
 @keyframes InMenuTitleAnimation {
@@ -35,6 +34,7 @@ border-radius: 40px;
         transform: rotateZ(360deg);
     }
 }
+
 .menu_line{
     position:sticky;
     overflow:hidden;
@@ -64,8 +64,8 @@ border-radius: 40px;
     overflow:scroll;
     font-family: Times New Roman;
     position:sticky;
-    width: 96%;
-    height:auto;
+    width: 100%;
+    height: fit-content;
     position:fixed;
     display:flex;
     animation-duration: 500ms;
@@ -79,7 +79,7 @@ border-radius: 40px;
     background-color: #FFEE99;
 }
 .hidden_menu{
-    margin-left:-270px;
+    margin-left:-300px;
 }
 .show_menu{
     margin-left:0px;
@@ -204,13 +204,26 @@ border-radius: 40px;
     text-align:center;
 }
 .logo{
-    width: 25%;
+    width: 55%;
+}
+.description_cont{
+    display:flex;
+    border-radius: 10px;
+    background-attachment: fixed;
 }
 .description{
-    color:white;
-    width:50%;
+    color:rgb(0, 0, 0);
+    flex:1;
+    text-rendering: optimizeLegibility;
+    transition-duration: 200ms;
+}
+.description:hover{
+    background-color:rgba(255, 255, 0, 0.555);
     border-radius: 10px;
-    color:black;
+}
+.image{
+    flex:1;
+    border-radius: 10px;
 }
 
 .ClassLogoMargin{
