@@ -16,7 +16,7 @@
                     menu.addEventListener("animationend", () => {
                         menu.style.animationName = "";
                         menu.classList.add('hidden_menu');
-                        menu.style.marginLeft = "-270px";
+                        menu.style.marginLeft = "-300px";
                        
                     })
                 }
@@ -28,7 +28,7 @@
                     menu.addEventListener("animationend", () => {
                         menu.style.animationName = "";
                         menu.classList.add('show_menu');
-                        menu.style.marginLeft = "0px";
+                        menu.style.marginLeft = "-5px";
                         
                     })
                 }
@@ -42,6 +42,11 @@
                 ON.classList.add('hidden_moving_text');
                 OFF.classList.remove('hidden_moving_text');
                 inMenu.style.animationName = "none";
+                inMenu.style.marginBottom = "-5px";
+                inMenu.style.marginTop = "25px";
+                inMenu.style.borderBottom = "1px dashed black";
+                inMenu.style.borderTop = "1px dashed black";
+                inMenu.style.borderRadius = "20px";
     }
 
     function resume_moving(){
@@ -52,4 +57,9 @@
                 OFF.classList.add('hidden_moving_text');
                 ON.classList.remove('hidden_moving_text');
                 inMenu.style.animationName = "InMenuTitleAnimation";
+                inMenu.style.borderBottom = "none";
+                inMenu.style.marginTop = "20px";
+                inMenu.style.borderTop = "none";
+                inMenu.style.marginBottom = "20px";
+                inMenu.style.borderRadius = "0px";
     }
